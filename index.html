@@ -6,24 +6,26 @@
     <title>Rafael Souza</title>
     <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/e1fa377263.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
         <nav class="menu">
           <ul>
-            <li class="menu-bar"><a href="#">Sobre</a></li>
-            <li class="menu-bar"><a href="#">Portfólio</a></li>
-            <li class="menu-bar"><a href="#">Contato</a></li>
+            <li class="menu-bar"><a href="#sobre">Sobre</a></li>
+            <li class="menu-bar"><a href="#portfolio">Portfólio</a></li>
+            <li class="menu-bar"><a href="#contato">Contato</a></li>
           </ul>
         </nav>
-        <div>
+        <div class="titulo">
           <h1 class="site-title">Rafael Souza da Silva</h1>
-          <h2 class="site-subtitle">Web Developer</h2>
+          <h2 class="site-subtitle">Jr. Web Developer</h2>
+          <h2 class="site-subtitle">IT Specialist Support</h2>
         </div>
       </header>
-    <section class="portfolio">
+    <section class="portfolio" id="portfolio">
       <h2>Portfólio</h2>
-      <div class="box">
+      <div class="grid">
         <figure class="item-portfolio">
           <img class="img-portfolio" src="./img/rupixen-com-unsplash.jpg" alt="eCommerce">
           <figcaption>eCommerce</figcaption>
@@ -36,11 +38,24 @@
           <img class="img-portfolio" src="./img/domenico-loia-unsplash.jpg" alt="Web design">
           <figcaption>Web design</figcaption>
         </figure>
-        <figure class="item-portfolio">
-          <img class="img-portfolio" src="./img/kaleidico-unsplash.jpg" alt="Projetos pessoais">
-          <figcaption>Projetos pessoais</figcaption>
-        </figure>
       </div>
+      </section>
+      <section class="contato" id="contato">
+        <h2>Contato</h2>
+        <div class="grid icons">
+          <a target="_blank" href="https://github.com/rafael2s">
+            <i class="fab fa-github"></i>
+          </a>
+          <a target="_blank" href="https://twitter.com/">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a target="_blank" href="https://www.linkedin.com/in/rafaelsouzadasilva/">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="mailto:rafael_popo@hotmail.com">
+            <i class="fas fa-at"></i>
+          </a>
+        </div>
       </section>
 </body>
 </html>

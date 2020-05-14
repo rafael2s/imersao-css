@@ -3,58 +3,64 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box; 
-    font-family: 'Balsamiq Sans', cursive;
 }
 
 body {
-    background-color: #432344;
+    background-image: url(../img/bg.jpg);
+    background-size: auto 100vh;
+    font-family: 'Balsamiq Sans', cursive;
     font-size: 14px;
     height: 100vh;
 }
 
 /* MOBILE */
-@media(min-width: 450px) {
+@media(min-width: 400px) {
     body {
-        font-size: 1.2em;
+        font-size: 14px;
     }
-
+}
+@media(min-width: 600px) {
+    body {
+        font-size: 18px;
+    }
+}
+@media(min-width: 1200px) {
+    body {
+        font-size: 20px;
+    }
 }
 
 header {
     align-items: center;
     display: flex;
-    background-image: url(../img/bg.jpg);
-    background-size: cover;
     height: 100vh;
     justify-content: center;
-    position: relative;
 }
 
 .menu {
     background-color: #432344;
-    margin: 0;
     position: fixed;
     top: 0;
+    z-index: 1;
     width: 100vw;
 }
-
 .menu ul {
     display: flex;
     justify-content: space-around;
-    padding: 15px 0;
 }
 .menu li {
     list-style: none;
     position: relative;
 }   
-
 .menu a {
-    color: #e7eefb;
     display: block;
     padding: 10px 20px;
-    text-decoration: none;
-    text-transform: uppercase;
 }
+a {
+    color: #e7eefb;
+    text-decoration: none;
+}
+
 /* Hover do menu */
 li.menu-bar a:before, li.menu-bar a:after{
     position: absolute;
@@ -81,43 +87,85 @@ li.menu-bar a:hover:before, li.menu-bar a:hover:after {
     opacity: 1;
     transform: translateY(0px);
 }
+/* Hover do menu END*/
+.titulo {
+    animation: linear 2s animacaoTitulo forwards;
+    opacity: 0;
+    transform: scale(0.2) translateY(50vh);
+}
+@keyframes animacaoTitulo {
+    100%{
+        opacity: 1;
+        transform: scale(1) translateY(0);       
+    }
+}
 
 .site-title, 
 .site-subtitle {
     color: #e7eefb;
     text-align: center;
 }
-
+.site-title {
+    font-size: 4em;
+}
 .site-subtitle {
     font-style: italic;
+    line-height: 1.8em;
 }
-
+.contato,
+.portfolio {
+    padding: 2em;
+    min-height: 100vh;
+}
+.contato h2,
 .portfolio h2 {
     color: #e7eefb;
+    font-size: 2em
+    margin-bottom: 1.5em;
+    padding-bottom: 30px; 
     text-align: center;
-    margin: 10px auto;
-}
-.box {
-    display: flex;
-    justify-content: space-between;
 }
 
-.item-portfolio {
-    color: #e7eefb;
-    width: 200px;
-    text-align: center;
+.portfolio .grid {
     display: grid;
-    margin: 0 10px;
-    padding: 10px;
-    align-content: space-around;
-    justify-content: center;
-    margin-bottom: 15px;
-    border: #7e4bff solid 2px;
-    border-radius: 8px;
-    
+    gap: 2em;
 }
+
+@media (min-width: 560px) {
+    .portfolio .grid {
+        grid-template-columns: 240px 240px;
+    }    
+}
+@media (min-width: 880px) {
+    .portfolio .grid {
+        align-content: center;
+        grid-template-columns: repeat(3, 260px);
+        justify-content: center;
+    }    
+}
+.portfolio figure {
+    text-align: center;
+}
+
 .img-portfolio {
-    padding: 10px 0;
-    width: 100%;
-    border-radius: 8px;
+    height: 180px;
+    object-fit: cover;
+    object-position: left bottom;
+    transition: transform 500ms;
+    width: 240px;
+}
+.img-portfolio:hover {
+    transform: scale(1.1) rotate(-3deg);
+}
+.contato .icons {
+    text-align: center;
+}
+.contato a {
+    color: whitesmoke;
+    font-size: 2em;
+    transition: text-shadow 1s;
+}
+.contato a:active,
+.contato a:hover {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
