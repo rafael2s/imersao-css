@@ -9,7 +9,7 @@ body {
     background-image: url(../img/bg.jpg);
     background-size: auto 100vh;
     font-family: 'Balsamiq Sans', cursive;
-    font-size: 14px;
+    font-size: 12px;
     height: 100vh;
 }
 
@@ -21,6 +21,8 @@ body {
 }
 @media(min-width: 600px) {
     body {
+        background-attachment: fixed;
+        background-size: cover;
         font-size: 18px;
     }
 }
@@ -36,7 +38,6 @@ header {
     height: 100vh;
     justify-content: center;
 }
-
 .menu {
     background-color: #432344;
     position: fixed;
@@ -50,54 +51,38 @@ header {
 }
 .menu li {
     list-style: none;
-    position: relative;
 }   
 .menu a {
     display: block;
     padding: 10px 20px;
+    transition: background-color 1s, color 1s;
+}
+.menu a:active,
+.menu a:hover {
+  background-color: teal;
+  color: white;
 }
 a {
     color: #e7eefb;
     text-decoration: none;
 }
-
-/* Hover do menu */
-li.menu-bar a:before, li.menu-bar a:after{
-    position: absolute;
-    left: 0px;
-    width: 100%;
-    height: 2px;
-    background: #7e4bff;
-    content: "";
-    opacity: 0;
-    transition: all 0.3s;
+a:hover {
+    text-decoration: underline;
 }
-
-li.menu-bar a:before {
-    top: 0px;
-    transform: translateY(10px);
-}
-
-li.menu-bar a:after {
-    bottom: 0px;
-    transform: translateY(-10px);
-}
-
-li.menu-bar a:hover:before, li.menu-bar a:hover:after {
-    opacity: 1;
-    transform: translateY(0px);
-}
-/* Hover do menu END*/
 .titulo {
-    animation: linear 2s animacaoTitulo forwards;
+    animation: 1s ease 500ms animacaoTitulo forwards;
     opacity: 0;
     transform: scale(0.2) translateY(50vh);
 }
 @keyframes animacaoTitulo {
-    100%{
-        opacity: 1;
-        transform: scale(1) translateY(0);       
+    from {
+        opacity: 0;
+        transform: scale(0.2) translateY(50vh);
     }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+        }
 }
 
 .site-title, 
@@ -112,25 +97,58 @@ li.menu-bar a:hover:before, li.menu-bar a:hover:after {
     font-style: italic;
     line-height: 1.8em;
 }
+.sobre,
 .contato,
 .portfolio {
     padding: 2em;
     min-height: 100vh;
 }
+@media (min-width: 1200px) {
+    .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+}
+.sobre h2,
 .contato h2,
 .portfolio h2 {
     color: #e7eefb;
-    font-size: 2em
+    font-size: 2em;
     margin-bottom: 1.5em;
-    padding-bottom: 30px; 
-    text-align: center;
 }
-
+.sobre p {
+    color: #FFF;
+    margin-bottom: 1.4em;
+    text-align: justify;
+    text-indent: 1.4em;
+}
+.sobre a {
+    color: #e7eefb;
+    text-decoration: underline;
+}
+.sobre a:hover {
+    background-color: cyan;
+    color: magenta;
+    text-decoration: none;
+  }
+.sobre .avatar {
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    margin-left: 2em;
+}
+@media (min-width: 600px) {
+    .sobre .avatar {
+        clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+        float: right;
+    }
+}
+.sobre .avatar img {
+    width: 300px;
+}
 .portfolio .grid {
     display: grid;
     gap: 2em;
 }
-
 @media (min-width: 560px) {
     .portfolio .grid {
         grid-template-columns: 240px 240px;
@@ -143,19 +161,47 @@ li.menu-bar a:hover:before, li.menu-bar a:hover:after {
         justify-content: center;
     }    
 }
-.portfolio figure {
-    text-align: center;
-}
-
-.img-portfolio {
+.flip-card {
     height: 180px;
-    object-fit: cover;
-    object-position: left bottom;
-    transition: transform 500ms;
-    width: 240px;
+    perspective: 500px;
 }
-.img-portfolio:hover {
-    transform: scale(1.1) rotate(-3deg);
+.flip-card:hover .card {
+    background: white;
+    height: 180px;
+    transform: rotateY(180deg);
+    width: 100%;
+}
+.card {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 3s;
+}
+.card-front, 
+.card-back {
+    backface-visibility: hidden;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.card-back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, .7);
+    height: 180px;
+    width: 100%;
+    transform: rotateY(180deg);
+}
+.portfolio figure {
+text-align: center;
+}
+.img-portfolio {
+height: 180px;
+width: 100%;
+object-fit: cover;
+object-position: left bottom;
+transition: transform 500ms;
 }
 .contato .icons {
     text-align: center;
@@ -167,5 +213,7 @@ li.menu-bar a:hover:before, li.menu-bar a:hover:after {
 }
 .contato a:active,
 .contato a:hover {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    text-shadow: 0px 0px 10px rgba(255,255,255,.5);
 }
+
