@@ -6,7 +6,7 @@
 }
 
 body {
-    background-image: url(../img/bg.jpg);
+    background-color:#132F2B;
     background-size: auto 100vh;
     font-family: 'Balsamiq Sans', cursive;
     font-size: 12px;
@@ -39,7 +39,8 @@ header {
     justify-content: center;
 }
 .menu {
-    background-color: #432344;
+    background-color: #E9FDED;
+    border-bottom: 5px solid #28CC9E;
     position: fixed;
     top: 0;
     z-index: 1;
@@ -59,11 +60,11 @@ header {
 }
 .menu a:active,
 .menu a:hover {
-  background-color: teal;
-  color: white;
+  background-color: #28CC9E;
+  color: #E9FDED;
 }
 a {
-    color: #e7eefb;
+    color: #28CC9E;
     text-decoration: none;
 }
 a:hover {
@@ -87,7 +88,7 @@ a:hover {
 
 .site-title, 
 .site-subtitle {
-    color: #e7eefb;
+    color: #28CC9E;
     text-align: center;
 }
 .site-title {
@@ -113,23 +114,26 @@ a:hover {
 .sobre h2,
 .contato h2,
 .portfolio h2 {
-    color: #e7eefb;
+    color: #28CC9E;
     font-size: 2em;
     margin-bottom: 1.5em;
 }
 .sobre p {
-    color: #FFF;
+    color: #E9FDED;
     margin-bottom: 1.4em;
     text-align: justify;
-    text-indent: 1.4em;
+    
 }
 .sobre a {
-    color: #e7eefb;
+    color: #28CC9E;
     text-decoration: underline;
 }
 .sobre a:hover {
-    background-color: cyan;
-    color: magenta;
+    background-color: #28CC9E;
+    border: 2px solid #E9FDED;
+    border-radius: 50%;
+    padding: 10px;
+    color: #E9FDED;
     text-decoration: none;
   }
 .sobre .avatar {
@@ -166,7 +170,8 @@ a:hover {
     perspective: 500px;
 }
 .flip-card:hover .card {
-    background: white;
+    background: #28CC9E;
+    color: #E9FDED;
     height: 180px;
     transform: rotateY(180deg);
     width: 100%;
@@ -185,10 +190,11 @@ a:hover {
     width: 100%;
 }
 .card-back {
+    color: #E9FDED;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(255, 255, 255, .7);
+    background-color: rgba(40, 204, 158, .7);
     height: 180px;
     width: 100%;
     transform: rotateY(180deg);
@@ -204,10 +210,12 @@ object-position: left bottom;
 transition: transform 500ms;
 }
 .contato .icons {
+    display: flex;
+    justify-content: space-around;
     text-align: center;
 }
 .contato a {
-    color: whitesmoke;
+    color: #28CC9E;
     font-size: 2em;
     transition: text-shadow 1s;
 }
