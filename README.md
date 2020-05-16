@@ -4,10 +4,10 @@ São 5 dias de aulas com as instrutoras Vanessa Tonini e Juliana Amoasi. E a id�
 
 Veja meu portfólio pessoal acessando [AQUI](https://rafael2s.github.io/imersao-css/) 
 
-###Links Helps
+### Links Helps
 [CSS-Clip](https://bennettfeely.com/clippy/)
 
-###Links inspiração
+### Links inspiração
 [Arte generativa - css-doodle](https://css-doodle.com/)
 [Taina Simoes](http://tainasimoes.com.br/generative-art/)
 
