@@ -34,6 +34,7 @@ body {
 
 header {
     align-items: center;
+    background-image: linear-gradient(rgba(19, 47, 43,.8), rgba(19, 47, 43,.8)), url(../img/bg.jpg);
     display: flex;
     height: 100vh;
     justify-content: center;
@@ -67,9 +68,7 @@ a {
     color: #28CC9E;
     text-decoration: none;
 }
-a:hover {
-    text-decoration: underline;
-}
+
 .titulo {
     animation: 1s ease 500ms animacaoTitulo forwards;
     opacity: 0;
@@ -88,7 +87,7 @@ a:hover {
 
 .site-title, 
 .site-subtitle {
-    color: #28CC9E;
+    color: #E9FDED;
     text-align: center;
 }
 .site-title {
@@ -102,14 +101,29 @@ a:hover {
 .contato,
 .portfolio {
     padding: 2em;
-    min-height: 100vh;
+    
 }
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+}
+/*
 @media (min-width: 1200px) {
     .container {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
     }
+}
+*/
+
+main {
+    background-color: #E9FDED;
+    border-top: 5px solid #28CC9E;
+    border-bottom: 5px solid #28CC9E;
+    width: 100%;
+
 }
 .sobre h2,
 .contato h2,
@@ -118,23 +132,21 @@ a:hover {
     font-size: 2em;
     margin-bottom: 1.5em;
 }
+
 .sobre p {
-    color: #E9FDED;
+    color: #132F2B;
     margin-bottom: 1.4em;
     text-align: justify;
     
 }
 .sobre a {
     color: #28CC9E;
-    text-decoration: underline;
 }
 .sobre a:hover {
-    background-color: #28CC9E;
-    border: 2px solid #E9FDED;
+    font-size: 1.2em;
     border-radius: 50%;
     padding: 10px;
-    color: #E9FDED;
-    text-decoration: none;
+    transition: 0.8s;
   }
 .sobre .avatar {
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
@@ -149,9 +161,14 @@ a:hover {
 .sobre .avatar img {
     width: 300px;
 }
+
+section {
+    border-top: : 5px solid #E9FDED;
+}
 .portfolio .grid {
     display: grid;
     gap: 2em;
+    padding-bottom: 50px;
 }
 @media (min-width: 560px) {
     .portfolio .grid {
@@ -175,6 +192,7 @@ a:hover {
     height: 180px;
     transform: rotateY(180deg);
     width: 100%;
+    border-radius: 10px;
 }
 .card {
     position: relative;
@@ -188,8 +206,11 @@ a:hover {
     position: absolute;
     top: 0;
     width: 100%;
+
 }
 .card-back {
+    border: 2px solid #E9FDED;
+    border-radius: 10px;
     color: #E9FDED;
     display: flex;
     align-items: center;
@@ -200,15 +221,25 @@ a:hover {
     transform: rotateY(180deg);
 }
 .portfolio figure {
-text-align: center;
+    text-align: center;
+
 }
 .img-portfolio {
-height: 180px;
-width: 100%;
-object-fit: cover;
-object-position: left bottom;
-transition: transform 500ms;
+    border: 2px solid #E9FDED;
+    border-radius: 10px;
+    height: 180px;
+    object-fit: cover;
+    object-position: left bottom;
+    transition: transform 500ms;
+    width: 100%;
 }
+
+footer {
+    background-color: #E9FDED;
+    border-top: 5px solid #28CC9E;
+    width: 100%;
+}
+
 .contato .icons {
     display: flex;
     justify-content: space-around;
@@ -216,12 +247,15 @@ transition: transform 500ms;
 }
 .contato a {
     color: #28CC9E;
-    font-size: 2em;
+    font-size: 3em;
     transition: text-shadow 1s;
 }
 .contato a:active,
 .contato a:hover {
+    font-size: 4em;
+    color: #E9FDED;
     text-decoration: none;
-    text-shadow: 0px 0px 10px rgba(255,255,255,.5);
+    text-shadow: 10px 0px 10px rgba(40, 204, 158, 10);
+    transition: 0.8s;
 }
 
