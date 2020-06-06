@@ -4,7 +4,7 @@ Imersão CSS
 
 #### São 5 dias de aulas com as instrutoras Vanessa Tonini e Juliana Amoasi. E a idéa é criar o próprio portfolio focando bastante em CSS.
 
-#### Veja meu o projento do meu portfólio acessando **[AQUI](https://rafael2s.github.io/imersao-css/)**
+#### Veja meu o projeto do meu portfólio acessando **[AQUI](https://rafael2s.github.io/imersao-css/)**
  
 
 ### Links Helps
